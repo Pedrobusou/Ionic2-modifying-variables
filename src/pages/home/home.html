@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="toSecondPage()">SecondPage</button>
+
+  <ion-item>
+    <button lightgray full (click)="incrementQty()">+</button>
+    <ion-item>
+      <ion-input type="number" min="1" [value]="qty" [(ngModel)]="qty"></ion-input>
+    </ion-item>
+    <button lightgray full (click)="decrementQty()">-</button>
+  </ion-item>
+
+  <!-- LECTURA -->
+  <ion-item>
+    <ion-input type="text" [value]="text"></ion-input>
+  </ion-item>
+
+  <!-- LECTURA Y ESCRITURA-->
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="text"></ion-input>
+  </ion-item>
+
+  <button ion-button (click)="updateName();">Update Name</button>
+
+  <!-- LECTURA -->
+  <textarea>Nombre: {{text}}</textarea>
+</ion-content>
